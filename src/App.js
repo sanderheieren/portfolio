@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useRef, useEffect} from 'react'
-import Canvas from './Canvas'
+import Canvas from './components/Canvas/Canvas'
+import animate from './components/Canvas/animate'
 
 function App() {
 
@@ -11,10 +12,10 @@ function App() {
       </header>
       <main>
         <p className="sub-text">I'm huge fan of the Fibonacci Sequence <br/>
-        Take a look at my algorithmic flower generator
+        Take a look at this algorithmic flower generator
         </p>
       </main>
-       <Canvas />
+       <Canvas animate={animate}/>
     </div>
   );
 }
