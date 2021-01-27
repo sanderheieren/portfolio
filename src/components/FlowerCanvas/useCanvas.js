@@ -10,14 +10,14 @@ const useCanvas = animate => {
     let hue = Math.random() * 360;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    ctx.canvas.height = 500;
-    ctx.canvas.width = 500;
+    ctx.canvas.height = 300;
+    ctx.canvas.width = 300;
     ctx.globalCompositeOperation = 'destination-over';
     let animationFrameId
 
     const render = () => {
       number++
-      hue = Math.random() * 360;
+      hue++ // = hue % 2 ? Math.random() * 360 : hue++;
       animate(ctx, scale, number, hue);
       animationFrameId = window.requestAnimationFrame(render);
     }
