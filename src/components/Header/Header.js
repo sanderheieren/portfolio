@@ -1,14 +1,20 @@
 import React from 'react'
 import './header.css'
-import Canvas from '../FlowerCanvas/Canvas'
+import Flower from '../FlowerCanvas/Flower'
 import animate from '../FlowerCanvas/animate'
+// import Particle from '../ParticlesCanvas/Particle'
+// import animateParticle from '../ParticlesCanvas/animateParticle'
+// import initParticle from '../ParticlesCanvas/initParticle'
 
 const Header = () => {
   return (
     <>
     <div className="header">
-      <h1>Hello, I'm Sander</h1>
-    <Canvas animate={animate}/>
+    {/* <Particle animateParticle={animateParticle} initParticle={initParticle}/> */}
+    <Flower animate={animate}/>
+    </div>
+    <div>
+      Connect with me
     </div>
     </>
   )

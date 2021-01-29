@@ -2,7 +2,7 @@ import React from 'react';
 import useCanvas from './useCanvas'
 import './canvas.css';
 
-const Canvas = props => {
+const Flower = props => {
 
   const { animate, ...rest} = props;
   const canvasRef = useCanvas(animate);
@@ -12,11 +12,11 @@ const Canvas = props => {
         <p className="sub-text">I'm huge fan of the Fibonacci Sequence <br/>
         Take a look at this algorithmic flower generator
         </p>
-    <div className="canvas-container">
-      <canvas id="canvas" ref={canvasRef} {...rest} />
-    </div>
+      <div className="canvas-container">
+        <canvas id="canvas" ref={canvasRef} {...rest} />
+      </div>
     </div>
   )
 }
 
-export default Canvas
+export default Flower

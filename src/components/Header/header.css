@@ -13,8 +13,9 @@
 	letter-spacing: 2px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 550px) {
 	.header {
 		margin-top: 100px;
+		flex-direction: column;
 	}
 }
