@@ -3,7 +3,7 @@ import './nav.css';
 
 
 const Nav = () => {
-  const [isActive, setActive] = useState('false');
+  const [isActive, setActive] = useState(false);
 
   const handleToggle = () => {
     setActive(!isActive)

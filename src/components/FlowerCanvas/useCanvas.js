@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react'
 
-const useCanvas = animate => {
+const useCanvas = (animate, generate) => {
 
     const canvasRef = useRef(null);
     
-    useEffect(() => {
+    useEffect(() => {      
     let number = 0;
     let scale = 2;
     let hue = Math.random() * 360;
@@ -18,7 +18,7 @@ const useCanvas = animate => {
     const render = () => {
       number++
       hue++ // = hue % 2 ? Math.random() * 360 : hue++;
-      animate(ctx, scale, number, hue);
+      animate(ctx, scale, number, hue, generate);
       animationFrameId = window.requestAnimationFrame(render);
     }
     render();
@@ -26,7 +26,7 @@ const useCanvas = animate => {
     return () => {
       window.cancelAnimationFrame(animationFrameId)
     }
-  }, [animate]);
+  }, [animate, generate]);
 
   return canvasRef;
 }

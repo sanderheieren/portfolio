@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react';
 import './header.css'
 import Flower from '../FlowerCanvas/Flower'
 import animate from '../FlowerCanvas/animate'
@@ -8,12 +8,17 @@ import Me from './Me'
 // import initParticle from '../ParticlesCanvas/initParticle'
 
 const Header = () => {
+    const [generate, setGenerate] = useState(false);
+    
+    const restart = () => {
+    setGenerate(!generate)
+  }
   return (
     <>
     <div className="header">
     {/* <Particle animateParticle={animateParticle} initParticle={initParticle}/> */}
     <Me />
-    <Flower animate={animate}/>
+    <Flower animate={animate} restart={restart} generate={generate}/>
     </div>
     </>
   )
