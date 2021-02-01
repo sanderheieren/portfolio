@@ -1,16 +1,43 @@
 .header {
-	margin-top: 60px;
+	margin-top: 71px;
 	display: flex;
 	font-size: calc(10px + 1vmin);
-	color: white;
 	align-items: center;
 	justify-content: space-around;
 }
 
-.sub-text {
-	color: white;
-	line-height: 22px;
-	letter-spacing: 2px;
+.title {
+	border-bottom: 2px solid black;
+}
+
+.title::before {
+	content: "Hi, I'm";
+	position: absolute;
+	top: -5px;
+	transform: rotateZ(-35deg);
+	position: absolute;
+	left: -50px;
+	font-size: 0.9rem;
+}
+
+.me {
+	position: relative;
+}
+
+.connect-profiles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.connect {
+	display: flex;
+}
+
+.icon {
+	color: black;
+	background-color: transparent;
+	margin: 0 10px;
 }
 
 @media (max-width: 550px) {

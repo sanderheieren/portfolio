@@ -9,12 +9,12 @@ const Flower = props => {
 
   return (
     <div className="wrapper">
-        <p className="sub-text">I'm huge fan of the Fibonacci Sequence <br/>
-        Take a look at this algorithmic flower generator
-        </p>
       <div className="canvas-container">
         <canvas id="canvas" ref={canvasRef} {...rest} />
       </div>
+        <p className="sub-text">I'm huge fan of the Fibonacci Sequence <br/>
+        Take a look at this algorithmic flower generator
+        </p>
     </div>
   )
 }
