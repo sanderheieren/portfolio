@@ -22,9 +22,9 @@ const animate = (ctx, scale, number, hue, generate) => {
     return;
   }
 
-  ctx.fillStyle = 'red'//'red'//`hsl(${Math.random() * 360},100%, 50%)`;
-  ctx.strokeStyle = 'black'//`hsl(${hue},100%, 50%)` // 'green';
-  ctx.lineWidth = 0.5;
+  ctx.fillStyle = `hsl(${hue},100%, 50%)`;
+  ctx.strokeStyle = 'lightgray' // black'//`hsl(${hue},100%, 50%)` // 'green';
+  ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.arc(posX, posY, radius, 0, Math.PI * 2);
   ctx.closePath();

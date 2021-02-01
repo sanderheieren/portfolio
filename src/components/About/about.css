@@ -1,3 +1,39 @@
 .about {
 	background-color: #282c34;
+	min-height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px 20px;
+}
+
+.about .img-me {
+	margin: 10px;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid white;
+}
+
+.picture {
+	height: 100%;
+}
+
+.about .info {
+	color: white;
+	margin: 10px 20px;
+	line-height: 1.5;
+	letter-spacing: 2px;
+	max-width: 600px;
+	text-align: justify;
+}
+
+@media (max-width: 550px) {
+	.about {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 10px;
+	}
 }
