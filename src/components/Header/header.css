@@ -25,7 +25,7 @@
 
 .me {
 	position: relative;
-	margin: 2px;
+	text-align: center;
 }
 
 .connect-profiles {
@@ -36,6 +36,10 @@
 
 .connect {
 	display: flex;
+	margin: 10px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 }
 .connect .sub-title {
 	white-space: nowrap;
@@ -43,8 +47,8 @@
 
 .icon-link {
 	color: black;
-	background-color: transparent;
 	margin: 0 10px;
+	opacity: 0.8;
 	background-color: #fff;
 	border: 0;
 	cursor: pointer;
@@ -52,6 +56,26 @@
 	position: relative;
 	height: 30px;
 	width: 30px;
+	transition: transform 0.2s ease-in;
+}
+
+.icon-link:hover {
+	transform: scale(1.11);
+}
+.icon-link.github:hover {
+	opacity: 1;
+	background-color: black;
+	color: white;
+	border-radius: 50%;
+}
+.icon-link.linkedin:hover {
+	transform: scale(1.05);
+	color: #2867b2;
+	opacity: 1;
+}
+.icon-link.twitter:hover {
+	transform: scale(1.05);
+	color: #1da1f2;
 }
 
 @media (max-width: 550px) {
